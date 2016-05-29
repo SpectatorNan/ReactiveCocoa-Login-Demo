@@ -1,25 +1,128 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="OH5-OB-hir">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--loginIn-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnn-ah-N5d">
+                                <rect key="frame" x="43" y="247" width="234" height="30"/>
+                                <color key="backgroundColor" red="0.58654429633149929" green="0.82706688882801593" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0nh-UG-1r5"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZQC-1t-IY1">
+                                <rect key="frame" x="43" y="116" width="234" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Il4-Ha-rMi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0rp-gb-zbF">
+                                <rect key="frame" x="43" y="179" width="234" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FfG-Nu-6g7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZQC-1t-IY1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="4hV-N9-nRO"/>
+                            <constraint firstItem="ZQC-1t-IY1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="96" id="5sD-QW-VCn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cnn-ah-N5d" secondAttribute="trailing" constant="27" id="L1Q-EX-0MK"/>
+                            <constraint firstItem="0rp-gb-zbF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="Yb8-BB-giT"/>
+                            <constraint firstItem="0rp-gb-zbF" firstAttribute="top" secondItem="ZQC-1t-IY1" secondAttribute="bottom" constant="33" id="pk6-3J-Ng9"/>
+                            <constraint firstItem="cnn-ah-N5d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="rdv-E0-8xO"/>
+                            <constraint firstItem="cnn-ah-N5d" firstAttribute="top" secondItem="0rp-gb-zbF" secondAttribute="bottom" constant="38" id="uow-ua-WbO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0rp-gb-zbF" secondAttribute="trailing" constant="27" id="zX9-Oj-8Hf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZQC-1t-IY1" secondAttribute="trailing" constant="27" id="zsi-XB-iN2"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="loginIn" id="WPH-5q-Shk"/>
+                    <connections>
+                        <outlet property="loginBTN" destination="cnn-ah-N5d" id="wRz-ik-Hv2"/>
+                        <outlet property="passTF" destination="0rp-gb-zbF" id="8HS-NR-O6C"/>
+                        <outlet property="userTF" destination="ZQC-1t-IY1" id="VQ0-GT-OfW"/>
+                        <segue destination="Kcy-VC-T3B" kind="push" identifier="Kitten" id="wDC-1z-I28"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="679" y="390"/>
+        </scene>
+        <!--Kitten-->
+        <scene sceneID="uzE-h6-CLJ">
+            <objects>
+                <viewController id="Kcy-VC-T3B" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1hv-BA-BDd"/>
+                        <viewControllerLayoutGuide type="bottom" id="DAv-qa-9ap"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dca-1p-RMk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitten.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kPd-Hf-pzk">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kPd-Hf-pzk" secondAttribute="trailing" id="3x0-Pn-4IN"/>
+                            <constraint firstItem="kPd-Hf-pzk" firstAttribute="leading" secondItem="dca-1p-RMk" secondAttribute="leading" id="MN5-cJ-C5H"/>
+                            <constraint firstItem="DAv-qa-9ap" firstAttribute="top" secondItem="kPd-Hf-pzk" secondAttribute="bottom" id="Owi-00-CHi"/>
+                            <constraint firstItem="kPd-Hf-pzk" firstAttribute="top" secondItem="1hv-BA-BDd" secondAttribute="bottom" id="Yha-uP-6mk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kitten" id="QdQ-tW-hh9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lho-sC-VaV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098" y="385"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tzz-NB-Xut">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OH5-OB-hir" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lsl-B3-3By">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zCT-oS-jcB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LPt-y4-5ZH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147" y="390"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kitten.jpg" width="537" height="740"/>
+    </resources>
 </document>
